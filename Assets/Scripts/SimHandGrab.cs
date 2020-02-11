@@ -10,6 +10,8 @@ public class SimHandGrab : MonoBehaviour
 
     public float throwForce = 15f;
 
+    public Animator handAnimator; // Open/close the hand
+
     // Detect what we just touched
     private void OnTriggerEnter(Collider other)
     {
@@ -43,6 +45,8 @@ public class SimHandGrab : MonoBehaviour
             {
                 Grab();
             }
+
+            handAnimator.SetBool("IsClosed", true); 
         }
         else if(Input.GetKeyDown(KeyCode.Mouse1)) // Throw
         {
@@ -50,6 +54,8 @@ public class SimHandGrab : MonoBehaviour
             {
                 Release(true);
             }
+
+            handAnimator.SetBool("IsClosed", false); // OPTIONAL!
         }
         else if(Input.GetKeyUp(KeyCode.Mouse0))
         {
@@ -57,6 +63,8 @@ public class SimHandGrab : MonoBehaviour
             {
                 Release(false);
             }
+
+            handAnimator.SetBool("IsClosed", false);
         }
     }
 
