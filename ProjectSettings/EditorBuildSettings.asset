@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Session3_Coding.unity
-    guid: 1d36b6d351ded8b4ea0ea2db78181bca
+    path: Assets/Scenes/Session6_Vuforia.unity
+    guid: 46dc7cc617279f14e99bb187d821d085
   m_configObjects: {}
